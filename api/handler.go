@@ -42,6 +42,7 @@ func CompleteQuest(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte("Quest completed successfully"))
 }
 
+// История выполненных пользователем заданий и его баланс
 func GetUser(w http.ResponseWriter, r *http.Request) {
 	userID, _ := strconv.Atoi(r.FormValue("id"))
 	user, err := service.GetUser(userID)
